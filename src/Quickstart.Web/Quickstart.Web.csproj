@@ -114,6 +114,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
+    <Content Include="Scripts\knockout.mapping-latest.debug.js" />
+    <Content Include="Scripts\knockout.mapping-latest.js" />
     <Content Include="Scripts\ViewModels\SimpleModelLoading.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
