@@ -3,14 +3,13 @@
 
 @section scripts
 {
-    <script type="text/javascript" src="/Scripts/ViewModels/SimpleModelLoading.js"></script>
     <script type="text/javascript">
-        var viewModel = new SimpleModelLoading(@Html.Raw(Model.ToJson()));
+        var viewModel = ko.mapping.fromJS(@Html.Raw(Model.ToJson()));
         ko.applyBindings(viewModel);
     </script>
 }
 
-<h2>Simple Model Loading Sample</h2>
+<h2>Dynamic Model Loading Sample</h2>
 
 <div>
     <label>First Name:</label>

@@ -3,14 +3,14 @@
 
 @section scripts
 {
-    <script type="text/javascript" src="/Scripts/ViewModels/SimpleModelLoading.js"></script>
+    <script type="text/javascript" src="/Scripts/ViewModels/DynamicModelLoading.js"></script>
     <script type="text/javascript">
-        var viewModel = new SimpleModelLoading(@Html.Raw(Model.ToJson()));
+        var viewModel = new DynamicModelLoading(@Html.Raw(Model.ToJson()));
         ko.applyBindings(viewModel);
     </script>
 }
 
-<h2>Simple Model Loading Sample</h2>
+<h2>Simple Model Loading With Client-Side Functions Sample</h2>
 
 <div>
     <label>First Name:</label>
@@ -36,3 +36,5 @@
     <label>Date of Birth:</label>
     <input type="text" data-bind="value: dateOfBirth"/>
 </div>
+
+<a href="#" data-bind="click:displayFullName">Display full name</a>

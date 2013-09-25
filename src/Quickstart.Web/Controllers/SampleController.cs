@@ -13,7 +13,25 @@ namespace Quickstart.Web.Controllers
 
         public ActionResult SimpleModelLoading()
         {
-            Person model = new Person
+            Person model = CreateModel();
+            return View(model);
+        }
+
+        public ActionResult DynamicModelLoading()
+        {
+            Person model = CreateModel();
+            return View(model);
+        }
+
+        public ActionResult DynamicModelLoadingWithClientSideFunctions()
+        {
+            Person model = CreateModel();
+            return View(model);
+        }
+
+        private static Person CreateModel()
+        {
+            return new Person
             {
                 FirstName = "Jason",
                 LastName = "Mitchell",
@@ -21,8 +39,6 @@ namespace Quickstart.Web.Controllers
                 PhoneNumber = "0123456789",
                 DateOfBirth = DateTime.Today.AddYears(-25)
             };
-
-            return View(model);
         }
     }
 }
