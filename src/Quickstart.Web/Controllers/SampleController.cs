@@ -40,5 +40,24 @@ namespace Quickstart.Web.Controllers
                 DateOfBirth = DateTime.Today.AddYears(-25)
             };
         }
+
+        private static Person CreateRandomModel()
+        {
+            Random random = new Random();
+            string[] firstNames = { "Jason", "John", "Dave", "Steve" };
+            string[] lastNames = { "Mitchell", "Brown", "White", "Smith" };
+
+            string firstName = firstNames[random.Next(firstNames.Length)];
+            string lastName = lastNames[random.Next(lastNames.Length)];
+
+            return new Person
+            {
+                FirstName = firstName,
+                LastName = lastName,
+                EmailAddress = string.Format("{0}@{1}.com", firstName, lastName),
+                PhoneNumber = random.Next(int.MaxValue).ToString("D10"),
+                DateOfBirth = DateTime.Today.AddYears(random.Next(-50, -10))
+            };
+        }
     }
 }
