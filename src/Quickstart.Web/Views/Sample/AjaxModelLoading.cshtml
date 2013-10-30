@@ -13,29 +13,35 @@
 
 <h2>Ajax Model Loading Sample</h2>
 
-<div>
-    <label>First Name:</label>
-    <input type="text" data-bind="value: firstName"/>
+<div data-bind="if: isLoading()">
+    Loading...
 </div>
 
-<div>
-    <label>Last Name:</label>
-    <input type="text" data-bind="value: lastName"/>
-</div>
+<div data-bind="if: isLoaded()">
+    <div>
+        <label>First Name:</label>
+        <input type="text" data-bind="value: firstName"/>
+    </div>
 
-<div>
-    <label>Email Address:</label>
-    <input type="text" data-bind="value: emailAddress"/>
-</div>
+    <div>
+        <label>Last Name:</label>
+        <input type="text" data-bind="value: lastName"/>
+    </div>
 
-<div>
-    <label>Phone Number:</label>
-    <input type="text" data-bind="value: phoneNumber"/>
-</div>
+    <div>
+        <label>Email Address:</label>
+        <input type="text" data-bind="value: emailAddress"/>
+    </div>
 
-<div>
-    <label>Date of Birth:</label>
-    <input type="text" data-bind="value: dateOfBirth"/>
+    <div>
+        <label>Phone Number:</label>
+        <input type="text" data-bind="value: phoneNumber"/>
+    </div>
+
+    <div>
+        <label>Date of Birth:</label>
+        <input type="text" data-bind="value: dateOfBirth"/>
+    </div>
 </div>
 
 <a href="#" data-bind="click: getRandomModel">Get random person</a>

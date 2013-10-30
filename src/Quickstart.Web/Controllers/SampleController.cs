@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Web.Mvc;
+using Quickstart.Web.ActionResults;
 using Quickstart.Web.Models;
 
 namespace Quickstart.Web.Controllers
@@ -31,7 +32,13 @@ namespace Quickstart.Web.Controllers
 
         public ActionResult AjaxModelLoading()
         {
-            Person model = CreateModel();
+            Person model = CreateRandomModel();
+
+            if (Request.IsAjaxRequest())
+            {
+                return new JsonNetResult(model);
+            }
+
             return View(model);
         }
 
