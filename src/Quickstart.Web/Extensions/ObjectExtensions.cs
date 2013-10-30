@@ -14,6 +14,5 @@ namespace Quickstart.Web.Extensions
 
             return JsonConvert.SerializeObject(obj, Formatting.None, serializerSettings);
         }
-
     }
 }
