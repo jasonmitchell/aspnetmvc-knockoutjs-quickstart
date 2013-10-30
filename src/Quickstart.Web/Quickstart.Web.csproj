@@ -112,10 +112,14 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <None Include="Scripts\jquery-2.0.3.intellisense.js" />
+    <Content Include="Scripts\jquery-2.0.3.js" />
+    <Content Include="Scripts\jquery-2.0.3.min.js" />
     <Content Include="Scripts\knockout-2.2.0.debug.js" />
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\knockout.mapping-latest.debug.js" />
     <Content Include="Scripts\knockout.mapping-latest.js" />
+    <Content Include="Scripts\ViewModels\AjaxModelLoading.js" />
     <Content Include="Scripts\ViewModels\DynamicModelLoading.js" />
     <Content Include="Scripts\ViewModels\SimpleModelLoading.js" />
     <Content Include="Scripts\_references.js" />
@@ -130,6 +134,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-2.0.3.min.map" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Sample\DynamicModelLoadingWithClientSideFunctions.cshtml" />
@@ -145,6 +150,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Sample\DynamicModelLoading.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sample\AjaxModelLoading.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

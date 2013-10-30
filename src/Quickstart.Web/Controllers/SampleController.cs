@@ -29,6 +29,12 @@ namespace Quickstart.Web.Controllers
             return View(model);
         }
 
+        public ActionResult AjaxModelLoading()
+        {
+            Person model = CreateModel();
+            return View(model);
+        }
+
         private static Person CreateModel()
         {
             return new Person
