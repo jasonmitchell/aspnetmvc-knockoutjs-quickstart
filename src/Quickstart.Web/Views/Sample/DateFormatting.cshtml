@@ -1,0 +1,19 @@
+﻿@using Quickstart.Web.Extensions
+@model Quickstart.Web.Models.Person
+
+@section scripts
+{
+    <script type="text/javascript" src="/Scripts/moment.min.js"></script>
+    <script type="text/javascript" src="/Scripts/knockout.bindings.date.js"></script>
+    <script type="text/javascript">
+        var viewModel = ko.mapping.fromJS(@Html.Raw(Model.ToJson()));
+        ko.applyBindings(viewModel);
+    </script>
+}
+
+<h2>Date Formatting With Moment.js</h2>
+
+<div>
+    <label>Date of Birth:</label>
+    <input type="text" data-bind="date: dateOfBirth, format: 'DD MMM YYYY'" />
+</div>

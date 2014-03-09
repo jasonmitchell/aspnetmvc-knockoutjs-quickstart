@@ -42,6 +42,12 @@ namespace Quickstart.Web.Controllers
             return View(model);
         }
 
+        public ActionResult DateFormatting()
+        {
+            Person model = CreateModel();
+            return View(model);
+        }
+
         private static Person CreateModel()
         {
             return new Person
